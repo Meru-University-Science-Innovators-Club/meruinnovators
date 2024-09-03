@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "907917663409",
+    "project_id": "meruinnovators-b4e73",
+    "storage_bucket": "meruinnovators-b4e73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907917663409:android:9cdd3b3c57d24bb5edd690",
+        "android_client_info": {
+          "package_name": "com.meruinnovators.meruinnovators"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxHsqo42dcWgoFQhifgGfABpJ9PKP_JTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907917663409:android:2245856d7c3a0897edd690",
+        "android_client_info": {
+          "package_name": "com.meruinnovators.meruinnovators.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxHsqo42dcWgoFQhifgGfABpJ9PKP_JTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907917663409:android:1c1daabcf50ab5c6edd690",
+        "android_client_info": {
+          "package_name": "com.meruinnovators.meruinnovators.stg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxHsqo42dcWgoFQhifgGfABpJ9PKP_JTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
