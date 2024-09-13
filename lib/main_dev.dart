@@ -15,10 +15,9 @@ Future<void> main() async {
   MeruInnovatorsConfig(
     values: MeruInnovatorsValues(
       urlScheme: 'http',
-      baseDomain: '192.168.68.181:5000',
+      baseDomain: '192.168.100.74:5000',
       hiveBox: 'dev-meruinnov',
     ),
   );
-
   await const AppBlocObserver().initApp(() => const MainApp());
 }

@@ -20,16 +20,30 @@ class AuthRepository {
 
   Future<String> signInWithGoogle() async {
     try {
-      final googleSignInAccount = await _googleSignIn.signIn();
-      final googleSignInAuthentication =
-          await googleSignInAccount?.authentication;
-      final AuthCredential credential = GoogleAuthProvider.credential(
-        idToken: googleSignInAuthentication?.idToken,
-        accessToken: googleSignInAuthentication?.accessToken,
+      final googleAccount = await _googleSignIn.signIn();
+      Logger().i('..... googleAccount $googleAccount');
+      final gAuthentication = await googleAccount?.authentication;
+      final credentials = GoogleAuthProvider.credential(
+        idToken: gAuthentication?.idToken,
+        accessToken: gAuthentication?.accessToken,
       );
-      final authResult = await _auth.signInWithCredential(credential);
-      final user = authResult.user;
 
+      final authResult = await _auth.signInWithCredential(credentials);
+      Logger().d('..... authResult $authResult');
+      final user = authResult.user;
+      Logger().d('..... user $user');
+
+      // final response = await _networkUtil.postReq(
+      //   '/login',
+      //   queryParameters: {
+      //     'avatar': user?.photoURL ?? '',
+      //     'name': user?.displayName ?? user?.email?.split(' ').first,
+      //     'type': 2,
+      //     'open_id': user?.uid,
+      //     'email': user?.email,
+      //   },
+      // );
+      // Logger().d(response);
       if (user != null) {
         assert(!user.isAnonymous, 'User must not be anonymous');
         return Future.value(authResult.credential?.accessToken);
@@ -43,7 +57,7 @@ class AuthRepository {
 
   Future<AuthResult> signIn({required String token}) async {
     try {
-      final response = await _networkUtil.postWithFormData(
+      final response = await _networkUtil.postReq(
         '/social_login/google',
         body: {
           'access_token': token,

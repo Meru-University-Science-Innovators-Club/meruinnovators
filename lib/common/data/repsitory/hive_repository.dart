@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:injectable/injectable.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:injectable/injectable.dart';
 import 'package:meruinnovators/common/data/models/auth.dart';
 import 'package:meruinnovators/common/data/models/meruinovatorsadapters.dart';
 import 'package:meruinnovators/common/utils/env/flavor_config.dart';

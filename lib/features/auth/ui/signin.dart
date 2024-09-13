@@ -1,14 +1,13 @@
 import 'package:auth_buttons/auth_buttons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:logger/logger.dart';
 import 'package:meruinnovators/common/constants/assets_constants..dart';
 import 'package:meruinnovators/common/utils/misc.dart';
 import 'package:meruinnovators/common/utils/router.dart';
-import 'package:meruinnovators/common/widgets/resolved_image.dart';
 import 'package:meruinnovators/features/auth/cubit/google_signin_cubit.dart';
 import 'package:meruinnovators/features/auth/cubit/google_signin_state.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meruinnovators/features/auth/cubit/social_signin_cubit.dart';
 import 'package:meruinnovators/features/auth/cubit/social_signin_state.dart';
 
@@ -20,7 +19,6 @@ class SignInScreen extends StatelessWidget {
     final (isLightMode, colorScheme) = Misc.getTheme(context);
     return BlocListener<GoogleSignInCubit, GoogleSignInState>(
       listener: (context, state) {
-        Logger().e("Signing Screen");
         state.maybeWhen(
           orElse: () {},
           error: (message) {
@@ -56,7 +54,9 @@ class SignInScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Spacer(),
-                    const ResolvedImage(imageUrl: AppAssets.meruLogo),
+                    SvgPicture.asset(
+                      AppAssets.meruLogo,
+                    ),
                     const SizedBox(height: 64),
                     BlocBuilder<GoogleSignInCubit, GoogleSignInState>(
                       builder: (context, state) {
@@ -68,6 +68,9 @@ class SignInScreen extends StatelessWidget {
                             onPressed: () async => context
                                 .read<GoogleSignInCubit>()
                                 .signInWithGoogle(),
+                            // onPressed: () => GoRouter.of(context).goNamed(
+                            //   MUSTRouter.applicationRoute,
+                            // ),
                           ),
                         );
                       },

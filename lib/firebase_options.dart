@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '907917663409',
     projectId: 'meruinnovators-b4e73',
     storageBucket: 'meruinnovators-b4e73.appspot.com',
+    androidClientId: '907917663409-4ambi1g4abuc1k88te1kbmuduu9v4vco.apps.googleusercontent.com',
+    iosClientId: '907917663409-7frp0co9lj92ljafig2uneh003vu20pb.apps.googleusercontent.com',
     iosBundleId: 'com.meruinnovators.meruinnovators',
   );
-
 }

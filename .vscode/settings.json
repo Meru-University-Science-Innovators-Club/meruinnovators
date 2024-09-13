@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "onFocusChange",
+    "explorer.fileNesting.enabled": false,
+    "explorer.fileNesting.expand": false,
+    "explorer.compactFolders": false
+}

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
 import 'package:meruinnovators/common/data/repsitory/hive_repository.dart';
 import 'package:meruinnovators/common/utils/router.dart';
 import 'package:meruinnovators/core/di/injectable.dart';
@@ -20,7 +19,6 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-    Logger().d('....... mainapp .......');
     return ResponsiveSizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp.router(

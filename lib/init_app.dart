@@ -31,27 +31,30 @@ class AppBlocObserver extends BlocObserver {
   Future<void> initApp(FutureOr<Widget> Function() builder) async {
     await runZonedGuarded(() async {
       Bloc.observer = const AppBlocObserver();
-
       await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform,
       );
       await configureDependency();
+
       await getIt<HiveRepository>().initBoxes();
+
       localDB = await getIt<DBRepository>().init();
-      runApp(MultiBlocProvider(
-        providers: [
-          BlocProvider<GoogleSignInCubit>(
-            create: (context) => GoogleSignInCubit(authRepository: getIt()),
-          ),
-          BlocProvider<SocialSigninCubit>(
-            create: (context) => SocialSigninCubit(
-              authRepository: getIt(),
-              hiveRepository: getIt(),
+      runApp(
+        MultiBlocProvider(
+          providers: [
+            BlocProvider<GoogleSignInCubit>(
+              create: (context) => GoogleSignInCubit(authRepository: getIt()),
             ),
-          ),
-        ],
-        child: await builder(),
-      ));
+            BlocProvider<SocialSigninCubit>(
+              create: (context) => SocialSigninCubit(
+                authRepository: getIt(),
+                hiveRepository: getIt(),
+              ),
+            ),
+          ],
+          child: await builder(),
+        ),
+      );
     }, (error, stackTrace) {
       if (kDebugMode) {
         log(error.toString(), stackTrace: stackTrace);

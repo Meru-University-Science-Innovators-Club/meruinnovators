@@ -13,7 +13,9 @@ class ResolvedImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return imageUrl.contains('.svg')
-        ? SvgPicture.network(imageUrl)
+        ? SvgPicture.network(
+            imageUrl,
+          )
         : CachedNetworkImage(
             imageUrl: imageUrl,
             placeholder: (_, __) => const SizedBox(

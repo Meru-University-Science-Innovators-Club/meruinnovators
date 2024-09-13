@@ -28,7 +28,7 @@ class NetworkUtil {
         contentType: 'application/json',
         headers: <String, dynamic>{
           'Accept': 'application/json',
-          'Api-Authorization-Key': 'droidconKe-2020',
+          // 'Api-Authorization-Key': 'droidconKe-2020',
         },
         connectTimeout: const Duration(seconds: 60 * 1000),
         receiveTimeout: const Duration(seconds: 60 * 1000),
@@ -130,7 +130,7 @@ class NetworkUtil {
     try {
       final response = await _getHttpClient().post<dynamic>(
         url,
-        data: json.encode(body),
+        data: body,
         queryParameters: queryParameters,
       );
 

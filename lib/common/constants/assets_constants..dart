@@ -17,4 +17,8 @@ class AppAssets {
   static const String viewsIcon = '$_svgsPath/views.svg';
   static const String verifiedIcon = '$_svgsPath/verified.svg';
   static const String meruLogo = '$_svgsPath/logo.svg';
+  static const String linkedin = 'assets/icons/in.png';
+  static const String git = 'assets/icons/git.png';
+  static const String twit = 'assets/icons/twit.png';
+  static const String schoolpic = 'assets/innovation.jpg';
 }

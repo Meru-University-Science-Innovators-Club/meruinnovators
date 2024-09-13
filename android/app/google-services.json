@@ -12,7 +12,20 @@
           "package_name": "com.meruinnovators.meruinnovators"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "907917663409-c2vl15fum42m333rhbuhlfqhl3rnr7eg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.meruinnovators.meruinnovators",
+            "certificate_hash": "4e8a6d3c22bc3ae0052749096e4bea05ffb68fd3"
+          }
+        },
+        {
+          "client_id": "907917663409-knmi1et0o47a1s5b1qmrks7107re5n3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDxHsqo42dcWgoFQhifgGfABpJ9PKP_JTA"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907917663409-knmi1et0o47a1s5b1qmrks7107re5n3o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "907917663409-7frp0co9lj92ljafig2uneh003vu20pb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meruinnovators.meruinnovators"
+              }
+            }
+          ]
         }
       }
     },
@@ -31,7 +56,20 @@
           "package_name": "com.meruinnovators.meruinnovators.dev"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "907917663409-84feh4dmjt5098tbhut0s8o3lknafd1b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.meruinnovators.meruinnovators.dev",
+            "certificate_hash": "4e8a6d3c22bc3ae0052749096e4bea05ffb68fd3"
+          }
+        },
+        {
+          "client_id": "907917663409-knmi1et0o47a1s5b1qmrks7107re5n3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDxHsqo42dcWgoFQhifgGfABpJ9PKP_JTA"
@@ -39,7 +77,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907917663409-knmi1et0o47a1s5b1qmrks7107re5n3o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "907917663409-7frp0co9lj92ljafig2uneh003vu20pb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meruinnovators.meruinnovators"
+              }
+            }
+          ]
         }
       }
     },
@@ -50,7 +100,20 @@
           "package_name": "com.meruinnovators.meruinnovators.stg"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "907917663409-4ambi1g4abuc1k88te1kbmuduu9v4vco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.meruinnovators.meruinnovators.stg",
+            "certificate_hash": "4e8a6d3c22bc3ae0052749096e4bea05ffb68fd3"
+          }
+        },
+        {
+          "client_id": "907917663409-knmi1et0o47a1s5b1qmrks7107re5n3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDxHsqo42dcWgoFQhifgGfABpJ9PKP_JTA"
@@ -58,7 +121,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907917663409-knmi1et0o47a1s5b1qmrks7107re5n3o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "907917663409-7frp0co9lj92ljafig2uneh003vu20pb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.meruinnovators.meruinnovators"
+              }
+            }
+          ]
         }
       }
     }
