@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:meruinnovators/common/constants/assets_constants..dart';
+import 'package:meruinnovators/common/constants/assets_constants.dart';
 import 'package:meruinnovators/features/aboutus/ui/widgets/image_cliper.dart';
 
 class AboutusScreen extends StatelessWidget {

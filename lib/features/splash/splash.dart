@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
-import 'package:meruinnovators/common/constants/assets_constants..dart';
+import 'package:meruinnovators/common/constants/assets_constants.dart';
 import 'package:meruinnovators/common/data/repsitory/hive_repository.dart';
 import 'package:meruinnovators/common/utils/misc.dart';
 import 'package:meruinnovators/common/utils/router.dart';

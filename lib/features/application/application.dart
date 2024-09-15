@@ -27,16 +27,21 @@ class _ApplicationScreenState extends State<ApplicationScreen> {
     pages.addAll([
       PageItem(
         title: 'Home',
-        icon: 'home',
+        icon: 'home_outlined',
         screen: HomeScreen(
           switchtab: () {
             switchTab(1);
           },
         ),
       ),
-      const PageItem(title: 'Events', icon: 'bell', screen: EventsScreen()),
-      const PageItem(title: 'Blogs', icon: 'time', screen: BlogsScreen()),
-      const PageItem(title: 'Account', icon: 'flower', screen: ProfileScreen()),
+      const PageItem(
+        title: 'Events',
+        icon: 'events',
+        screen: EventsScreen(),
+      ),
+      const PageItem(title: 'Blogs', icon: 'blogs', screen: BlogsScreen()),
+      const PageItem(
+          title: 'Account', icon: 'account', screen: ProfileScreen()),
     ]);
   }
 

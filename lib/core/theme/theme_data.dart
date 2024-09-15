@@ -60,7 +60,7 @@ class AppTheme {
         brightness: Brightness.dark,
         primary: ThemeColors.blueGreenDroidconColor,
         primaryContainer: ThemeColors.blueDroidconColor,
-        onPrimary: Colors.black,
+        onPrimary: Colors.white,
         secondary: ThemeColors.blueDroidconColor,
         secondaryContainer: Colors.black,
         onSecondary: Colors.white,
@@ -78,7 +78,53 @@ class AppTheme {
         indicatorColor: ThemeColors.blueDroidconColor,
         elevation: 3,
       ),
-      textTheme: GoogleFonts.montserratTextTheme(),
+      textTheme: GoogleFonts.montserratTextTheme().copyWith(
+        bodyLarge: const TextStyle(
+          color: Colors.white,
+        ),
+        bodyMedium: const TextStyle(
+          color: Colors.white,
+        ),
+        bodySmall: const TextStyle(
+          color: Colors.white,
+        ),
+        displayLarge: const TextStyle(
+          color: Colors.white,
+        ),
+        displayMedium: const TextStyle(
+          color: Colors.white,
+        ),
+        displaySmall: const TextStyle(
+          color: Colors.white,
+        ),
+        headlineLarge: const TextStyle(
+          color: Colors.white,
+        ),
+        headlineMedium: const TextStyle(
+          color: Colors.white,
+        ),
+        headlineSmall: const TextStyle(
+          color: Colors.white,
+        ),
+        labelLarge: const TextStyle(
+          color: Colors.white,
+        ),
+        labelMedium: const TextStyle(
+          color: Colors.white,
+        ),
+        labelSmall: const TextStyle(
+          color: Colors.white,
+        ),
+        titleLarge: const TextStyle(
+          color: Colors.white,
+        ),
+        titleMedium: const TextStyle(
+          color: Colors.white,
+        ),
+        titleSmall: const TextStyle(
+          color: Colors.white,
+        ),
+      ),
       pageTransitionsTheme: const PageTransitionsTheme(
         builders: {
           TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:meruinnovators/common/constants/assets_constants..dart';
+import 'package:meruinnovators/common/constants/assets_constants.dart';
 import 'package:meruinnovators/common/utils/misc.dart';
 import 'package:meruinnovators/common/utils/router.dart';
 import 'package:meruinnovators/features/auth/cubit/google_signin_cubit.dart';
@@ -65,12 +65,12 @@ class SignInScreen extends StatelessWidget {
                           orElse: () => GoogleAuthButton(
                             themeMode:
                                 isLightMode ? ThemeMode.light : ThemeMode.dark,
-                            onPressed: () async => context
-                                .read<GoogleSignInCubit>()
-                                .signInWithGoogle(),
-                            // onPressed: () => GoRouter.of(context).goNamed(
-                            //   MUSTRouter.applicationRoute,
-                            // ),
+                            // onPressed: () async => context
+                            //     .read<GoogleSignInCubit>()
+                            //     .signInWithGoogle(),
+                            onPressed: () => GoRouter.of(context).goNamed(
+                              MUSTRouter.applicationRoute,
+                            ),
                           ),
                         );
                       },

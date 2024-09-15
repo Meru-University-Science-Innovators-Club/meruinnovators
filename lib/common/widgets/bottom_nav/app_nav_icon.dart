@@ -19,7 +19,7 @@ class AppNavIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      'assets/icons/$name.svg',
+      'assets/svgs/$name.svg',
       semanticsLabel: semanticsLabel,
       colorFilter: color != null
           ? ColorFilter.mode(color!, BlendMode.srcIn)

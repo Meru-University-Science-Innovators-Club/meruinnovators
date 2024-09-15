@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
+import 'package:meruinnovators/features/aboutus/aboutus.dart';
 import 'package:meruinnovators/features/application/application.dart';
 import 'package:meruinnovators/features/auth/ui/signin.dart';
 import 'package:meruinnovators/features/splash/splash.dart';
@@ -18,6 +19,7 @@ class MUSTRouter {
   static const String autherDetailsRoute = '/auher-details';
   static const String organiserDetailsRoute = '/organiser-details';
   static const String feedbackRoute = '/feedback';
+  static const String aboutusRoute = '/aboutus';
 
   GoRouter config() => router;
 
@@ -42,6 +44,12 @@ class MUSTRouter {
         path: applicationRoute,
         name: applicationRoute,
         builder: (context, state) => const ApplicationScreen(),
+      ),
+
+      GoRoute(
+        path: aboutusRoute,
+        name: aboutusRoute,
+        builder: (context, state) => const AboutusScreen(),
       ),
 
       // GoRoute(

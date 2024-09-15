@@ -6,7 +6,7 @@ class OurPartners extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120,
+      height: 110,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 5,
@@ -22,7 +22,7 @@ class OurPartners extends StatelessWidget {
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/images/',
+                          'assets/images/test3.jpg',
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -41,7 +41,7 @@ class OurPartners extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    '',
+                    'Partner name',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.secondary,
                     ),

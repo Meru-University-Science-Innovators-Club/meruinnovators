@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:meruinnovators/common/utils/router.dart';
 
 class Aboutus extends StatelessWidget {
   const Aboutus({super.key});
@@ -6,7 +8,9 @@ class Aboutus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => GoRouter.of(context).pushNamed(
+        MUSTRouter.aboutusRoute,
+      ),
       child: Container(
         width: 360,
         margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),

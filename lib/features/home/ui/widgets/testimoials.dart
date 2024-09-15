@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meruinnovators/common/constants/assets_constants..dart';
+import 'package:meruinnovators/common/constants/assets_constants.dart';
 import 'package:meruinnovators/common/widgets/social_button.dart';
 
 class Testimoials extends StatelessWidget {
@@ -73,7 +73,7 @@ class Testimoials extends StatelessWidget {
                     color: Colors.black,
                   ),
                   SocialButton(
-                    asset: AppAssets.twitterLogo,
+                    asset: AppAssets.twit,
                     ontap: () {},
                     color: const Color.fromARGB(255, 1, 128, 232),
                   ),
