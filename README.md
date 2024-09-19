@@ -26,5 +26,5 @@
 6. Run the application:
     - For development:
     ```bash
-    flutter run  --flavor development --target lib/main_development.dart
+    flutter run  --flavor development --target lib/main_dev.dart
     ```
