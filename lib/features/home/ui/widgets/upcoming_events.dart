@@ -36,6 +36,7 @@ class UpcomingEvents extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: 260,
+                      // height: 230,
                       child: Column(
                         children: [
                           Container(
@@ -121,6 +122,7 @@ class UpcomingEvents extends StatelessWidget {
                         ],
                       ),
                     ),
+                 
                   ],
                 ),
               ),

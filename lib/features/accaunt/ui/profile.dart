@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.height * .5,
+                    height: MediaQuery.of(context).size.height * .27,
                   ),
                   Positioned(
                     top: 0,
@@ -41,33 +41,37 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
-                    top: 200,
-                    left: 20,
-                    // right: 0,
-                    child: Column(
-                      children: [
-                        Text(
-                          'Emmanuel Bett',
-                          style: Theme.of(context).primaryTextTheme.titleMedium,
-                        ),
-                        Text(
-                          '@emmanuel_dev2',
-                          style: Theme.of(context)
-                              .primaryTextTheme
-                              .bodyMedium
-                              ?.copyWith(color: Colors.grey),
-                        ),
-                        Text(
-                          'Playing long term games with long term people',
-                          style: Theme.of(context).primaryTextTheme.bodyMedium,
-                        ),
-                      ],
-                    ),
-                  ),
+                   
+                  
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Emmanuel Bett',
+                            style: Theme.of(context).primaryTextTheme.titleMedium,
+                          ),
+                          Text(
+                            '@emmanuel_dev2',
+                            style: Theme.of(context)
+                                .primaryTextTheme
+                                .bodyMedium
+                                ?.copyWith(color: Colors.grey),
+                          ),
+                          const SizedBox(height: 10,),
+                          Text(
+                            'Playing long term games with long term people',
+                            style: Theme.of(context).primaryTextTheme.bodyMedium,
+                          ),
+                        ],
+                      ),
+            ),
+          
+          
           ],
         ),
       ),

@@ -30,11 +30,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    const Text(
+                     Text(
                       'Upcomming Events',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-                    ),
+                      style:Theme.of(context).primaryTextTheme.titleMedium,),
                     TextButton(
                       onPressed: () {
                         // Navigator.of(context).push(
@@ -43,13 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         //   ),
                         // );
                       },
-                      child: const Text(
+                      child:  Text(
                         'See All',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 17,
-                          color: Colors.greenAccent,
-                        ),
+                        style:  Theme.of(context).primaryTextTheme.titleMedium?.copyWith(color: Colors.greenAccent,),
                       ),
                       // splashColor: Colors.transparent,
                     ),
@@ -57,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Container(
-                height: 260,
+                height: 300,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 7,
@@ -77,22 +71,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    const Text(
+                     Text(
                       'Our Partners',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                      ),
+                      style: Theme.of(context).primaryTextTheme.titleMedium
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: const Text(
+                      child:  Text(
                         'See All',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 17,
-                          color: Colors.greenAccent,
-                        ),
+                        style:  Theme.of(context).primaryTextTheme.titleMedium?.copyWith(color: Colors.greenAccent,),
                       ),
                     ),
                   ],
@@ -106,22 +93,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    const Text(
+                     Text(
                       'Testimonials',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                      ),
+                      style: Theme.of(context).primaryTextTheme.titleMedium,
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: const Text(
+                      child:  Text(
                         'See All',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 17,
-                          color: Colors.greenAccent,
-                        ),
+                        style: Theme.of(context).primaryTextTheme.titleMedium?.copyWith(color: Colors.greenAccent,),
                       ),
                     ),
                   ],
@@ -141,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
               ),
-              const Padding(
+               Padding(
                 padding: EdgeInsets.only(
                   left: 18,
                 ),
@@ -150,14 +130,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: <Widget>[
                     Text(
                       'About Us',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                      style:Theme.of(context).primaryTextTheme.titleMedium,
                     ),
-                    // TextButton(
-                    //   onPressed: () {},
-                    //   child: Text("See All"),
-                    //   // splashColor: Colors.transparent,
-                    // )
                   ],
                 ),
               ),

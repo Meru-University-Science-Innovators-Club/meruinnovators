@@ -3,7 +3,7 @@ import 'package:meruinnovators/common/data/models/page_item.dart';
 import 'package:meruinnovators/common/widgets/bottom_nav/bottom_nav_bar.dart';
 import 'package:meruinnovators/features/accaunt/ui/profile.dart';
 import 'package:meruinnovators/features/blogs/ui/blogs.dart';
-import 'package:meruinnovators/features/events/ui/events.dart';
+import 'package:meruinnovators/features/events/ui/events_screen.dart';
 import 'package:meruinnovators/features/home/ui/home.dart';
 
 /// Default Screen to handle all the UIs after the Splash Screen
