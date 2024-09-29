@@ -4,7 +4,7 @@ import 'package:meruinnovators/common/widgets/bottom_nav/app_nav_icon.dart';
 import 'package:meruinnovators/core/theme/theme_colors.dart';
 
 /// Custom Bottom Navigation Bar that will handles the page to be displayed on
-/// the dashboard
+/// the homepage
 class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({
     required this.selectedIndex,

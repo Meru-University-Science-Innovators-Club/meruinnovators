@@ -41,7 +41,7 @@ class _ApplicationScreenState extends State<ApplicationScreen> {
       ),
       const PageItem(title: 'Blogs', icon: 'blogs', screen: BlogsScreen()),
       const PageItem(
-          title: 'Account', icon: 'account', screen: ProfileScreen()),
+          title: 'Account', icon: 'account', screen: ProfileScreen(),),
     ]);
   }
 
