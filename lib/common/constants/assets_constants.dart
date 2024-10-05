@@ -22,4 +22,5 @@ class AppAssets {
   static const String twit = 'assets/icons/twit.png';
   static const String schoolpic = 'assets/innovation.jpg';
   static const String test1 = 'assets/images/test2.jpg';
+  static const String aboutusmd = 'assets/aboutus.md';
 }

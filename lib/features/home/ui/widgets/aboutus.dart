@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:meruinnovators/common/utils/router.dart';
 
-class Aboutus extends StatelessWidget {
-  const Aboutus({super.key});
+class AboutusCard extends StatelessWidget {
+  const AboutusCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +12,10 @@ class Aboutus extends StatelessWidget {
         MUSTRouter.aboutusRoute,
       ),
       child: Container(
-        width: 360,
+        // width: 360,
         margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
         decoration: BoxDecoration(
-          color: Colors.green.shade400,
+          color: Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(12),
           boxShadow: const <BoxShadow>[
             BoxShadow(
@@ -46,7 +46,7 @@ class Aboutus extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(8))),
                 ),
               ),
-              const Positioned(
+              Positioned(
                 left: 135,
                 bottom: 0,
                 right: 0,
@@ -57,10 +57,9 @@ class Aboutus extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 10),
                       child: Text(
                         'Innovation Club',
-                        style: TextStyle(
-                            color: Colors.black87,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold),
+                        style: Theme.of(context).textTheme.titleLarge,
+                        maxLines: 1,
+                        textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
@@ -68,11 +67,8 @@ class Aboutus extends StatelessWidget {
                       width: 2100,
                       // padding: EdgeInsets.only(left: 150),
                       child: Text(
-                        'Innovtion is a club meant to be helpfuln in innvention and mentoring students to persue their dreams inTechnology field',
-                        style: TextStyle(
-                          color: Colors.black87,
-                          // fontSize: 15.0,
-                        ),
+                        'Meru Science Innovation Club is meant to be helpful in innvention and mentoring students to persue their dreams in Technology field. You want to find more about us?',
+                        style: Theme.of(context).textTheme.bodyLarge,
                         maxLines: 6,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.start,
