@@ -43,7 +43,7 @@ class OurPartners extends StatelessWidget {
                   Text(
                     'Partner name',
                     style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,

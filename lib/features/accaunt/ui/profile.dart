@@ -15,14 +15,14 @@ class ProfileScreen extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.height * .27,
+                    height: MediaQuery.of(context).size.height * .226,
                   ),
                   Positioned(
                     top: 0,
                     left: 0,
                     right: 0,
                     child: SizedBox(
-                      height: 150,
+                    height:  MediaQuery.of(context).size.height * .18,
                       child: Image.asset(
                         AppAssets.test1,
                         fit: BoxFit.cover,
@@ -30,7 +30,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: 110,
+                    top: MediaQuery.of(context).size.height * .12,
                     left: 30,
                     child: Container(
                       margin: const EdgeInsets.all(5),
