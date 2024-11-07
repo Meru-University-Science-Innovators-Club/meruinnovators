@@ -65,12 +65,12 @@ class SignInScreen extends StatelessWidget {
                           orElse: () => GoogleAuthButton(
                             themeMode:
                                 isLightMode ? ThemeMode.light : ThemeMode.dark,
-                            // onPressed: () async => context
-                            //     .read<GoogleSignInCubit>()
-                            //     .signInWithGoogle(),
-                            onPressed: () => GoRouter.of(context).goNamed(
-                              MUSTRouter.applicationRoute,
-                            ),
+                            onPressed: () async => context
+                                .read<GoogleSignInCubit>()
+                                .signInWithGoogle(),
+                            // onPressed: () => GoRouter.of(context).goNamed(
+                            //   MUSTRouter.applicationRoute,
+                            // ),
                           ),
                         );
                       },

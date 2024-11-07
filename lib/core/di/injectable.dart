@@ -1,10 +1,10 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'package:isar/isar.dart';
+// import 'package:isar/isar.dart';
 import 'package:meruinnovators/core/di/injectable.config.dart';
 
 final getIt = GetIt.instance;
-late Isar localDB;
+// late Isar localDB;
 
 @InjectableInit(
   initializerName: 'initGetIt',
