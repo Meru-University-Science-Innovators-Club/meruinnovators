@@ -29,7 +29,6 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     gh.singleton<_i3.AuthRepository>(() => _i3.AuthRepository());
-    gh.singleton<_i4.DBRepository>(() => _i4.DBRepository());
     gh.singleton<_i5.HiveRepository>(() => _i5.HiveRepository());
     gh.singleton<_i6.MUSTRouter>(() => _i6.MUSTRouter());
     return this;

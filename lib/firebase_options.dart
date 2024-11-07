@@ -50,21 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDxHsqo42dcWgoFQhifgGfABpJ9PKP_JTA',
-    appId: '1:907917663409:android:9cdd3b3c57d24bb5edd690',
-    messagingSenderId: '907917663409',
-    projectId: 'meruinnovators-b4e73',
-    storageBucket: 'meruinnovators-b4e73.appspot.com',
+    apiKey: 'AIzaSyAclwoT2tRELSMayq121gNqBNvgGeoYDUw',
+    appId: '1:1031154568419:android:53867ea3165562e35ec9d6',
+    messagingSenderId: '1031154568419',
+    projectId: 'meruinnovators-96f3f',
+    storageBucket: 'meruinnovators-96f3f.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDKQl7cXXSY_w_HXuZ9gekvHLiLJ_02MKg',
-    appId: '1:907917663409:ios:a42ae7e2569300f9edd690',
-    messagingSenderId: '907917663409',
-    projectId: 'meruinnovators-b4e73',
-    storageBucket: 'meruinnovators-b4e73.appspot.com',
-    androidClientId: '907917663409-4ambi1g4abuc1k88te1kbmuduu9v4vco.apps.googleusercontent.com',
-    iosClientId: '907917663409-7frp0co9lj92ljafig2uneh003vu20pb.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDV8TJrYI1pXobuI5gC5ddhUfBvm-RhRs4',
+    appId: '1:1031154568419:ios:923371e1459f64b15ec9d6',
+    messagingSenderId: '1031154568419',
+    projectId: 'meruinnovators-96f3f',
+    storageBucket: 'meruinnovators-96f3f.firebasestorage.app',
     iosBundleId: 'com.meruinnovators.meruinnovators',
   );
+
 }

@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:isar/isar.dart';
+// import 'package:isar/isar.dart';
 part 'local_user.g.dart';
 
-@collection
+// @collection
 class LocalUser {
   LocalUser({
     required this.name,
@@ -17,7 +17,7 @@ class LocalUser {
     this.bio,
     List<Projects>? projects,
   }) : _projectsJson = jsonEncode(projects?.map((p) => p.toJson()).toList());
-  Id id = Isar.autoIncrement;
+  // Id id = Isar.autoIncrement;
   final String name;
   final String username;
   final String? location;

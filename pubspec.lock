@@ -33,14 +33,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
-  appinio_social_share:
-    dependency: "direct main"
-    description:
-      name: appinio_social_share
-      sha256: df12236ed9dd202b6cd7095f7f9c739416726ec5a53b923ea535d745fb5dc938
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.3.2"
   archive:
     dependency: transitive
     description:
@@ -297,14 +289,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.2"
-  dartx:
-    dependency: transitive
-    description:
-      name: dartx
-      sha256: "8b25435617027257d43e6508b5fe061012880ddfdaa75a71d607c3de2a13d244"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.0"
   dio:
     dependency: "direct main"
     description:
@@ -499,6 +483,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_markdown:
+    dependency: "direct main"
+    description:
+      name: flutter_markdown
+      sha256: f0e599ba89c9946c8e051780f0ec99aba4ba15895e0380a7ab68f420046fc44e
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.4+1"
   flutter_native_splash:
     dependency: "direct dev"
     description:
@@ -741,30 +733,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
-  isar:
-    dependency: "direct main"
-    description:
-      name: isar
-      sha256: "99165dadb2cf2329d3140198363a7e7bff9bbd441871898a87e26914d25cf1ea"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.1.0+1"
-  isar_flutter_libs:
-    dependency: "direct main"
-    description:
-      name: isar_flutter_libs
-      sha256: bc6768cc4b9c61aabff77152e7f33b4b17d2fc93134f7af1c3dd51500fe8d5e8
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.1.0+1"
-  isar_generator:
-    dependency: "direct dev"
-    description:
-      name: isar_generator
-      sha256: "76c121e1295a30423604f2f819bc255bc79f852f3bc8743a24017df6068ad133"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.1.0+1"
   js:
     dependency: transitive
     description:
@@ -837,6 +805,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  markdown:
+    dependency: transitive
+    description:
+      name: markdown
+      sha256: ef2a1298144e3f985cc736b22e0ccdaf188b5b3970648f2d9dc13efd1d9df051
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.2.2"
   matcher:
     dependency: transitive
     description:
@@ -1049,18 +1025,18 @@ packages:
     dependency: "direct main"
     description:
       name: share_plus
-      sha256: "468c43f285207c84bcabf5737f33b914ceb8eb38398b91e5e3ad1698d1b72a52"
+      sha256: "3af2cda1752e5c24f2fc04b6083b40f013ffe84fb90472f30c6499a9213d5442"
       url: "https://pub.dev"
     source: hosted
-    version: "10.0.2"
+    version: "10.1.1"
   share_plus_platform_interface:
     dependency: transitive
     description:
       name: share_plus_platform_interface
-      sha256: "6ababf341050edff57da8b6990f11f4e99eaba837865e2e6defe16d039619db5"
+      sha256: c57c0bbfec7142e3a0f55633be504b796af72e60e3c791b44d5a017b985f7a48
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.0"
+    version: "5.0.1"
   shelf:
     dependency: transitive
     description:
@@ -1194,14 +1170,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.2"
-  time:
-    dependency: transitive
-    description:
-      name: time
-      sha256: ad8e018a6c9db36cb917a031853a1aae49467a93e0d464683e029537d848c221
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.4"
   timeago:
     dependency: "direct main"
     description:
@@ -1426,14 +1394,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.5.0"
-  xxh3:
-    dependency: transitive
-    description:
-      name: xxh3
-      sha256: a92b30944a9aeb4e3d4f3c3d4ddb3c7816ca73475cd603682c4f8149690f56d7
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.1"
   yaml:
     dependency: transitive
     description:

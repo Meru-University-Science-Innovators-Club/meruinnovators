@@ -38,7 +38,7 @@ class AppBlocObserver extends BlocObserver {
 
       await getIt<HiveRepository>().initBoxes();
 
-      localDB = await getIt<DBRepository>().init();
+      // localDB = await getIt<DBRepository>().init();
       runApp(
         MultiBlocProvider(
           providers: [
