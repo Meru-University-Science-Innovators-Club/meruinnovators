@@ -29,7 +29,7 @@ class _ApplicationScreenState extends State<ApplicationScreen> {
         title: 'Home',
         icon: 'home_outlined',
         screen: HomeScreen(
-          switchtab: () {
+          switchEvents: () {
             switchTab(1);
           },
         ),
