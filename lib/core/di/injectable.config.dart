@@ -12,10 +12,9 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:meruinnovators/common/data/repsitory/auth_repository.dart'
     as _i3;
-import 'package:meruinnovators/common/data/repsitory/db_repository.dart' as _i4;
 import 'package:meruinnovators/common/data/repsitory/hive_repository.dart'
-    as _i5;
-import 'package:meruinnovators/common/utils/router.dart' as _i6;
+    as _i4;
+import 'package:meruinnovators/common/utils/router.dart' as _i5;
 
 extension GetItInjectableX on _i1.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -29,8 +28,8 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     gh.singleton<_i3.AuthRepository>(() => _i3.AuthRepository());
-    gh.singleton<_i5.HiveRepository>(() => _i5.HiveRepository());
-    gh.singleton<_i6.MUSTRouter>(() => _i6.MUSTRouter());
+    gh.singleton<_i4.HiveRepository>(() => _i4.HiveRepository());
+    gh.singleton<_i5.MUSTRouter>(() => _i5.MUSTRouter());
     return this;
   }
 }

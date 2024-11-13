@@ -20,11 +20,18 @@ InnovatorUser _$InnovatorUserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$InnovatorUser {
-  String? get name => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get username => throw _privateConstructorUsedError;
+  List<String> get skills => throw _privateConstructorUsedError;
+  List<Socials> get socials => throw _privateConstructorUsedError;
+  List<Framework> get frameworks => throw _privateConstructorUsedError;
+  String get role => throw _privateConstructorUsedError;
+  String get bio => throw _privateConstructorUsedError;
+  String get accessToken => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
-  String? get createdAt => throw _privateConstructorUsedError;
-  String get avatar => throw _privateConstructorUsedError;
+  String? get created_at => throw _privateConstructorUsedError;
+  String? get photo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,10 +46,17 @@ abstract class $InnovatorUserCopyWith<$Res> {
       _$InnovatorUserCopyWithImpl<$Res, InnovatorUser>;
   @useResult
   $Res call(
-      {String? name,
-      String? email,
-      @JsonKey(name: 'created_at') String? createdAt,
-      String avatar});
+      {String id,
+      String name,
+      String username,
+      List<String> skills,
+      List<Socials> socials,
+      List<Framework> frameworks,
+      String role,
+      String bio,
+      String accessToken,
+      @JsonKey(name: 'created_at') String? created_at,
+      String? photo});
 }
 
 /// @nodoc
@@ -58,28 +72,63 @@ class _$InnovatorUserCopyWithImpl<$Res, $Val extends InnovatorUser>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? email = freezed,
-    Object? createdAt = freezed,
-    Object? avatar = null,
+    Object? id = null,
+    Object? name = null,
+    Object? username = null,
+    Object? skills = null,
+    Object? socials = null,
+    Object? frameworks = null,
+    Object? role = null,
+    Object? bio = null,
+    Object? accessToken = null,
+    Object? created_at = freezed,
+    Object? photo = freezed,
   }) {
     return _then(_value.copyWith(
-      name: freezed == name
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatar: null == avatar
-          ? _value.avatar
-          : avatar // ignore: cast_nullable_to_non_nullable
               as String,
+      username: null == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      skills: null == skills
+          ? _value.skills
+          : skills // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      socials: null == socials
+          ? _value.socials
+          : socials // ignore: cast_nullable_to_non_nullable
+              as List<Socials>,
+      frameworks: null == frameworks
+          ? _value.frameworks
+          : frameworks // ignore: cast_nullable_to_non_nullable
+              as List<Framework>,
+      role: null == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as String,
+      bio: null == bio
+          ? _value.bio
+          : bio // ignore: cast_nullable_to_non_nullable
+              as String,
+      accessToken: null == accessToken
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      created_at: freezed == created_at
+          ? _value.created_at
+          : created_at // ignore: cast_nullable_to_non_nullable
+              as String?,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -93,10 +142,17 @@ abstract class _$$InnovatorUserImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? name,
-      String? email,
-      @JsonKey(name: 'created_at') String? createdAt,
-      String avatar});
+      {String id,
+      String name,
+      String username,
+      List<String> skills,
+      List<Socials> socials,
+      List<Framework> frameworks,
+      String role,
+      String bio,
+      String accessToken,
+      @JsonKey(name: 'created_at') String? created_at,
+      String? photo});
 }
 
 /// @nodoc
@@ -110,28 +166,63 @@ class __$$InnovatorUserImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? email = freezed,
-    Object? createdAt = freezed,
-    Object? avatar = null,
+    Object? id = null,
+    Object? name = null,
+    Object? username = null,
+    Object? skills = null,
+    Object? socials = null,
+    Object? frameworks = null,
+    Object? role = null,
+    Object? bio = null,
+    Object? accessToken = null,
+    Object? created_at = freezed,
+    Object? photo = freezed,
   }) {
     return _then(_$InnovatorUserImpl(
-      name: freezed == name
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatar: null == avatar
-          ? _value.avatar
-          : avatar // ignore: cast_nullable_to_non_nullable
               as String,
+      null == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == skills
+          ? _value._skills
+          : skills // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      null == socials
+          ? _value._socials
+          : socials // ignore: cast_nullable_to_non_nullable
+              as List<Socials>,
+      null == frameworks
+          ? _value._frameworks
+          : frameworks // ignore: cast_nullable_to_non_nullable
+              as List<Framework>,
+      null == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == bio
+          ? _value.bio
+          : bio // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == accessToken
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      freezed == created_at
+          ? _value.created_at
+          : created_at // ignore: cast_nullable_to_non_nullable
+              as String?,
+      photo: freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -139,29 +230,71 @@ class __$$InnovatorUserImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$InnovatorUserImpl implements _InnovatorUser {
-  const _$InnovatorUserImpl(
-      {this.name,
-      this.email,
-      @JsonKey(name: 'created_at') this.createdAt,
-      this.avatar = 'https://via.placeholder.com/150'});
+  _$InnovatorUserImpl(
+      this.id,
+      this.name,
+      this.username,
+      final List<String> skills,
+      final List<Socials> socials,
+      final List<Framework> frameworks,
+      this.role,
+      this.bio,
+      this.accessToken,
+      @JsonKey(name: 'created_at') this.created_at,
+      {this.photo = 'https://via.placeholder.com/150'})
+      : _skills = skills,
+        _socials = socials,
+        _frameworks = frameworks;
 
   factory _$InnovatorUserImpl.fromJson(Map<String, dynamic> json) =>
       _$$InnovatorUserImplFromJson(json);
 
   @override
-  final String? name;
+  final String id;
   @override
-  final String? email;
+  final String name;
+  @override
+  final String username;
+  final List<String> _skills;
+  @override
+  List<String> get skills {
+    if (_skills is EqualUnmodifiableListView) return _skills;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_skills);
+  }
+
+  final List<Socials> _socials;
+  @override
+  List<Socials> get socials {
+    if (_socials is EqualUnmodifiableListView) return _socials;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_socials);
+  }
+
+  final List<Framework> _frameworks;
+  @override
+  List<Framework> get frameworks {
+    if (_frameworks is EqualUnmodifiableListView) return _frameworks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_frameworks);
+  }
+
+  @override
+  final String role;
+  @override
+  final String bio;
+  @override
+  final String accessToken;
   @override
   @JsonKey(name: 'created_at')
-  final String? createdAt;
+  final String? created_at;
   @override
   @JsonKey()
-  final String avatar;
+  final String? photo;
 
   @override
   String toString() {
-    return 'InnovatorUser(name: $name, email: $email, createdAt: $createdAt, avatar: $avatar)';
+    return 'InnovatorUser(id: $id, name: $name, username: $username, skills: $skills, socials: $socials, frameworks: $frameworks, role: $role, bio: $bio, accessToken: $accessToken, created_at: $created_at, photo: $photo)';
   }
 
   @override
@@ -169,16 +302,38 @@ class _$InnovatorUserImpl implements _InnovatorUser {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InnovatorUserImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.avatar, avatar) || other.avatar == avatar));
+            (identical(other.username, username) ||
+                other.username == username) &&
+            const DeepCollectionEquality().equals(other._skills, _skills) &&
+            const DeepCollectionEquality().equals(other._socials, _socials) &&
+            const DeepCollectionEquality()
+                .equals(other._frameworks, _frameworks) &&
+            (identical(other.role, role) || other.role == role) &&
+            (identical(other.bio, bio) || other.bio == bio) &&
+            (identical(other.accessToken, accessToken) ||
+                other.accessToken == accessToken) &&
+            (identical(other.created_at, created_at) ||
+                other.created_at == created_at) &&
+            (identical(other.photo, photo) || other.photo == photo));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, email, createdAt, avatar);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      name,
+      username,
+      const DeepCollectionEquality().hash(_skills),
+      const DeepCollectionEquality().hash(_socials),
+      const DeepCollectionEquality().hash(_frameworks),
+      role,
+      bio,
+      accessToken,
+      created_at,
+      photo);
 
   @JsonKey(ignore: true)
   @override
@@ -195,24 +350,45 @@ class _$InnovatorUserImpl implements _InnovatorUser {
 }
 
 abstract class _InnovatorUser implements InnovatorUser {
-  const factory _InnovatorUser(
-      {final String? name,
-      final String? email,
-      @JsonKey(name: 'created_at') final String? createdAt,
-      final String avatar}) = _$InnovatorUserImpl;
+  factory _InnovatorUser(
+      final String id,
+      final String name,
+      final String username,
+      final List<String> skills,
+      final List<Socials> socials,
+      final List<Framework> frameworks,
+      final String role,
+      final String bio,
+      final String accessToken,
+      @JsonKey(name: 'created_at') final String? created_at,
+      {final String? photo}) = _$InnovatorUserImpl;
 
   factory _InnovatorUser.fromJson(Map<String, dynamic> json) =
       _$InnovatorUserImpl.fromJson;
 
   @override
-  String? get name;
+  String get id;
   @override
-  String? get email;
+  String get name;
+  @override
+  String get username;
+  @override
+  List<String> get skills;
+  @override
+  List<Socials> get socials;
+  @override
+  List<Framework> get frameworks;
+  @override
+  String get role;
+  @override
+  String get bio;
+  @override
+  String get accessToken;
   @override
   @JsonKey(name: 'created_at')
-  String? get createdAt;
+  String? get created_at;
   @override
-  String get avatar;
+  String? get photo;
   @override
   @JsonKey(ignore: true)
   _$$InnovatorUserImplCopyWith<_$InnovatorUserImpl> get copyWith =>
@@ -225,8 +401,8 @@ AuthResult _$AuthResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AuthResult {
-  String get token => throw _privateConstructorUsedError;
-  InnovatorUser get user => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
+  InnovatorUser get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -240,9 +416,9 @@ abstract class $AuthResultCopyWith<$Res> {
           AuthResult value, $Res Function(AuthResult) then) =
       _$AuthResultCopyWithImpl<$Res, AuthResult>;
   @useResult
-  $Res call({String token, InnovatorUser user});
+  $Res call({String message, InnovatorUser data});
 
-  $InnovatorUserCopyWith<$Res> get user;
+  $InnovatorUserCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -258,26 +434,26 @@ class _$AuthResultCopyWithImpl<$Res, $Val extends AuthResult>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? token = null,
-    Object? user = null,
+    Object? message = null,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      token: null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
               as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
               as InnovatorUser,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InnovatorUserCopyWith<$Res> get user {
-    return $InnovatorUserCopyWith<$Res>(_value.user, (value) {
-      return _then(_value.copyWith(user: value) as $Val);
+  $InnovatorUserCopyWith<$Res> get data {
+    return $InnovatorUserCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value) as $Val);
     });
   }
 }
@@ -290,10 +466,10 @@ abstract class _$$AuthResultImplCopyWith<$Res>
       __$$AuthResultImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String token, InnovatorUser user});
+  $Res call({String message, InnovatorUser data});
 
   @override
-  $InnovatorUserCopyWith<$Res> get user;
+  $InnovatorUserCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -307,17 +483,17 @@ class __$$AuthResultImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? token = null,
-    Object? user = null,
+    Object? message = null,
+    Object? data = null,
   }) {
     return _then(_$AuthResultImpl(
-      token: null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
               as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
               as InnovatorUser,
     ));
   }
@@ -326,19 +502,19 @@ class __$$AuthResultImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AuthResultImpl implements _AuthResult {
-  const _$AuthResultImpl({required this.token, required this.user});
+  const _$AuthResultImpl({required this.message, required this.data});
 
   factory _$AuthResultImpl.fromJson(Map<String, dynamic> json) =>
       _$$AuthResultImplFromJson(json);
 
   @override
-  final String token;
+  final String message;
   @override
-  final InnovatorUser user;
+  final InnovatorUser data;
 
   @override
   String toString() {
-    return 'AuthResult(token: $token, user: $user)';
+    return 'AuthResult(message: $message, data: $data)';
   }
 
   @override
@@ -346,13 +522,13 @@ class _$AuthResultImpl implements _AuthResult {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuthResultImpl &&
-            (identical(other.token, token) || other.token == token) &&
-            (identical(other.user, user) || other.user == user));
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.data, data) || other.data == data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, token, user);
+  int get hashCode => Object.hash(runtimeType, message, data);
 
   @JsonKey(ignore: true)
   @override
@@ -370,16 +546,16 @@ class _$AuthResultImpl implements _AuthResult {
 
 abstract class _AuthResult implements AuthResult {
   const factory _AuthResult(
-      {required final String token,
-      required final InnovatorUser user}) = _$AuthResultImpl;
+      {required final String message,
+      required final InnovatorUser data}) = _$AuthResultImpl;
 
   factory _AuthResult.fromJson(Map<String, dynamic> json) =
       _$AuthResultImpl.fromJson;
 
   @override
-  String get token;
+  String get message;
   @override
-  InnovatorUser get user;
+  InnovatorUser get data;
   @override
   @JsonKey(ignore: true)
   _$$AuthResultImplCopyWith<_$AuthResultImpl> get copyWith =>

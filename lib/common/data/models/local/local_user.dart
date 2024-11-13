@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 // import 'package:isar/isar.dart';
-part 'local_user.g.dart';
+// part 'local_user.g.dart';
 
 // @collection
 class LocalUser {

@@ -14,8 +14,8 @@ Future<void> main() async {
 
   MeruInnovatorsConfig(
     values: MeruInnovatorsValues(
-      urlScheme: 'http',
-      baseDomain: '192.168.100.74:5000',
+      urlScheme: 'https',
+      baseDomain: 'sv99tncg-8081.uks1.devtunnels.ms',
       hiveBox: 'dev-meruinnov',
     ),
   );
