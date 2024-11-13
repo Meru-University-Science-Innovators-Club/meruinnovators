@@ -24,11 +24,10 @@ class NetworkUtil {
   Dio _getHttpClient() {
     final dio = Dio(
       BaseOptions(
-        baseUrl: '${MeruInnovatorsConfig.instance!.values.baseUrl}/api',
+        baseUrl: '${MeruInnovatorsConfig.instance!.values.baseUrl}/api/v1',
         contentType: 'application/json',
         headers: <String, dynamic>{
-          'Accept': 'application/json',
-          // 'Api-Authorization-Key': 'droidconKe-2020',
+          'Accept': 'application/json'
         },
         connectTimeout: const Duration(seconds: 60 * 1000),
         receiveTimeout: const Duration(seconds: 60 * 1000),

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
+import 'package:meruinnovators/common/constants/api_constants.dart';
 import 'package:meruinnovators/common/data/models/auth.dart';
 import 'package:meruinnovators/common/data/models/failure.dart';
 import 'package:meruinnovators/common/utils/network.dart';
@@ -15,6 +16,7 @@ class AuthRepository {
     scopes: [
       'profile',
       'email',
+      'openid',
     ],
   );
 
@@ -58,14 +60,12 @@ class AuthRepository {
   Future<AuthResult> signIn({required String token}) async {
     try {
       final response = await _networkUtil.postReq(
-        '/social_login/google',
+        ApiConstants.googleAuth,
         body: {
-          'access_token': token,
+          'token': token,
         },
       );
-
       Logger().d(response);
-
       return AuthResult.fromJson(response);
     } catch (e) {
       rethrow;

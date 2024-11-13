@@ -24,8 +24,8 @@ class SocialSigninCubit extends Cubit<SocialSigninState> {
         token: token,
       );
       _hiveRepository
-        ..persistToken(authResult.token)
-        ..persistUser(authResult.user);
+        ..persistToken(authResult.data.accessToken)
+        ..persistUser(authResult.data);
 
       emit(const SocialSigninState.loaded());
     } catch (e) {
