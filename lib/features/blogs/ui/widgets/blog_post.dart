@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:meruinnovators/common/utils/misc.dart';
+import 'package:meruinnovators/common/utils/router.dart';
 import 'package:sizer/sizer.dart';
 
 class BlogPosts extends StatelessWidget {
@@ -12,7 +14,7 @@ class BlogPosts extends StatelessWidget {
   Widget build(BuildContext context) {
     final (isLightMode, colorScheme) = Misc.getTheme(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: ()=>GoRouter.of(context).pushNamed(MUSTRouter.blogDetailsRoute),
       child: Card(
         margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
         child: Column(
@@ -37,20 +39,21 @@ class BlogPosts extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(
+                    height: 8,
+                  ),
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const SizedBox(
-                        height: 8,
-                      ),
+
                       Container(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 8,
                           vertical: 2,
                         ),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(.4),
+                          color: Colors.white.withOpacity(.2),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
@@ -162,11 +165,13 @@ class BlogPosts extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
-                      const SizedBox(
-                        height: 8,
-                      ),
+
                     ],
-                  )
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+
                 ],
               ),
             ),
