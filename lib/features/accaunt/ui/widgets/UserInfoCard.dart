@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:meruinnovators/common/constants/assets_constants.dart';
+import 'package:meruinnovators/common/widgets/social_button.dart';
 
 class UserInfoCard extends StatefulWidget {
   const UserInfoCard({super.key});
@@ -116,16 +117,21 @@ class _UserInfoCardState extends State<UserInfoCard> {
                   children: List.generate(social.length, (index) {
                     Uri uri = Uri.parse(social[index]);
                     String domain = uri.host;
-                    return CircleAvatar(
-                      radius: 15,
-                      backgroundColor: Colors.white.withOpacity(.3),
-                      child: Container(
-                          decoration: BoxDecoration(shape: BoxShape.circle),
-                          width: 25,
-                          height: 25,
-                          child: Image.network(
-                              'https://$domain/favicon.ico',fit:
-                            BoxFit.cover,),),
+                    // return CircleAvatar(
+                    //   radius: 15,
+                    //   backgroundColor: Colors.white.withOpacity(.3),
+                    //   child: Container(
+                    //       decoration: BoxDecoration(shape: BoxShape.circle),
+                    //       width: 25,
+                    //       height: 25,
+                    //       child: Image.network(
+                    //           'https://$domain/favicon.ico',fit:
+                    //         BoxFit.cover,),),
+                    // );
+                    return SocialButton(
+                      ontap: () {},
+                      asset: 'https://$domain/favicon.ico',
+                      isNetwork: true,
                     );
                   }),
                 )

@@ -4,6 +4,8 @@ import 'package:injectable/injectable.dart';
 import 'package:meruinnovators/features/aboutus/aboutus.dart';
 import 'package:meruinnovators/features/application/application.dart';
 import 'package:meruinnovators/features/auth/ui/signin.dart';
+import 'package:meruinnovators/features/blogs/ui/blogs_details.dart';
+import 'package:meruinnovators/features/events/ui/event_details.dart';
 import 'package:meruinnovators/features/splash/splash.dart';
 
 @singleton
@@ -18,6 +20,7 @@ class MUSTRouter {
   static const String eventsDetailsRoute = '/events-details';
   static const String autherDetailsRoute = '/auher-details';
   static const String organiserDetailsRoute = '/organiser-details';
+  static const String blogDetailsRoute = '/blog-details';
   static const String feedbackRoute = '/feedback';
   static const String aboutusRoute = '/aboutus';
 
@@ -50,6 +53,17 @@ class MUSTRouter {
         path: aboutusRoute,
         name: aboutusRoute,
         builder: (context, state) => const AboutusScreen(),
+      ),
+
+      GoRoute(
+        path: eventsDetailsRoute,
+        name: eventsDetailsRoute,
+        builder: (context, state) => const EventDetails(),
+      ),
+      GoRoute(
+        path: blogDetailsRoute,
+        name: blogDetailsRoute,
+        builder: (context, state) => const BlogsDetails(),
       ),
 
       // GoRoute(

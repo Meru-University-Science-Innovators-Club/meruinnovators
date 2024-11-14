@@ -1,26 +1,32 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:meruinnovators/common/utils/misc.dart';
 
 class SocialButton extends StatelessWidget {
   const SocialButton({
     required this.ontap,
     required this.asset,
-    required this.color,
+    this.color,
+    this.isNetwork = false,
     super.key,
   });
 
   final VoidCallback ontap;
   final String asset;
-  final Color color;
+  final Color? color;
+  final bool isNetwork;
+
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    final (_,colorscheme) = Misc.getTheme(context);
+    return GestureDetector(
       onTap: ontap,
-      splashColor: Colors.green.shade400,
       child: Container(
         width: 40,
         height: 40,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.white.withOpacity(.4),
           border: Border.all(
             // color: AppColors.primaryElement,
             width: 2,
@@ -29,7 +35,7 @@ class SocialButton extends StatelessWidget {
         ),
         padding: const EdgeInsets.all(6),
         margin: const EdgeInsets.only(left: 5),
-        child: Image.asset(
+        child: isNetwork?Image.network(asset): Image.asset(
           asset,
           color: color,
         ),
