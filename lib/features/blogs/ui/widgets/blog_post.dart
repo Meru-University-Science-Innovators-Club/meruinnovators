@@ -8,7 +8,6 @@ class BlogPosts extends StatelessWidget {
   const BlogPosts({
     super.key,
   });
-
   // final List<Article> articles;
   @override
   Widget build(BuildContext context) {
@@ -19,21 +18,6 @@ class BlogPosts extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
         child: Column(
           children: [
-            Container(
-              height: 150,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(10),
-                  topLeft: Radius.circular(10),
-                ),
-                image: DecorationImage(
-                  fit: BoxFit.fitWidth,
-                  image: NetworkImage(
-                    'https://images.unsplash.com/photo-1520110120835-c96534a4c984?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaCUyMGV2ZW50fGVufDB8fDB8fHww',
-                  ),
-                ),
-              ),
-            ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
