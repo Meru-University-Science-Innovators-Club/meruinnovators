@@ -3,9 +3,12 @@ import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meruinnovators/features/aboutus/aboutus.dart';
 import 'package:meruinnovators/features/application/application.dart';
+import 'package:meruinnovators/features/auth/ui/otp.dart';
 import 'package:meruinnovators/features/auth/ui/signin.dart';
+import 'package:meruinnovators/features/auth/ui/signup.dart';
 import 'package:meruinnovators/features/blogs/ui/blogs_details.dart';
 import 'package:meruinnovators/features/events/ui/event_details.dart';
+import 'package:meruinnovators/features/settings/ui/setting.dart';
 import 'package:meruinnovators/features/splash/splash.dart';
 
 @singleton
@@ -14,6 +17,8 @@ class MUSTRouter {
 
   static const String decisionRoute = '/';
   static const String signInRoute = '/sign-in';
+  static const String signUpRoute = '/sign-up';
+  static const String otpRoute = '/otp';
   static const String eventsListRoute = '/application';
   static const String applicationRoute = '/application';
   static const String organiserListRoute = 'organisers';
@@ -23,6 +28,7 @@ class MUSTRouter {
   static const String blogDetailsRoute = '/blog-details';
   static const String feedbackRoute = '/feedback';
   static const String aboutusRoute = '/aboutus';
+  static const String settingsRoute = '/settings';
 
   GoRouter config() => router;
 
@@ -44,9 +50,24 @@ class MUSTRouter {
         builder: (context, state) => const SignInScreen(),
       ),
       GoRoute(
+        path: otpRoute,
+        name: otpRoute,
+        builder: (context, state) => const OtpScreen(),
+      ),
+      GoRoute(
+        path: signUpRoute,
+        name: signUpRoute,
+        builder: (context, state) => const SignUpScreen(),
+      ),
+      GoRoute(
         path: applicationRoute,
         name: applicationRoute,
         builder: (context, state) => const ApplicationScreen(),
+      ),
+      GoRoute(
+        path: settingsRoute,
+        name: settingsRoute,
+        builder: (context, state) => const SettingsScreen(),
       ),
 
       GoRoute(

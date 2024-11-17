@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meruinnovators/features/accaunt/ui/widgets/UserInfoCard.dart';
+import 'package:meruinnovators/features/accaunt/ui/widgets/project_section.dart';
+import 'package:meruinnovators/features/blogs/ui/widgets/blog_post.dart';
 import 'package:sizer/sizer.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -27,6 +29,25 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
+            SliverToBoxAdapter(
+              child: ProjectsSection(),
+            ),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text(
+                  'My Articles',
+                  style: TextStyle(
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto'
+                  ),
+                ),
+              ),
+            ),
+            SliverList.builder(itemBuilder: (context,index){
+              return BlogPosts();
+            },itemCount: 5,)
           ],
         ),
       ),

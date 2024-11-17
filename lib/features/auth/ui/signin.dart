@@ -1,4 +1,5 @@
 import 'package:auth_buttons/auth_buttons.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -10,13 +11,27 @@ import 'package:meruinnovators/features/auth/cubit/google_signin_cubit.dart';
 import 'package:meruinnovators/features/auth/cubit/google_signin_state.dart';
 import 'package:meruinnovators/features/auth/cubit/social_signin_cubit.dart';
 import 'package:meruinnovators/features/auth/cubit/social_signin_state.dart';
+import 'package:meruinnovators/features/auth/ui/widgets/custom_text_field.dart';
 
-class SignInScreen extends StatelessWidget {
+class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
+
+  @override
+  State<SignInScreen> createState() => _SignInScreenState();
+}
+
+class _SignInScreenState extends State<SignInScreen> {
+  final TextEditingController usernameController =
+      TextEditingController(text: '@');
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confPassController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     final (isLightMode, colorScheme) = Misc.getTheme(context);
+    var isVisible = false;
     return BlocListener<GoogleSignInCubit, GoogleSignInState>(
       listener: (context, state) {
         state.maybeWhen(
@@ -47,22 +62,104 @@ class SignInScreen extends StatelessWidget {
         },
         child: Scaffold(
           body: SafeArea(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Spacer(),
                     SvgPicture.asset(
                       AppAssets.meruLogo,
                     ),
-                    const SizedBox(height: 64),
+                    const SizedBox(height: 20),
+                    Column(
+                      children: [
+                        CustomTextField(
+                          prefix: const Icon(Icons.person),
+                          controller: nameController,
+                          maxLines: 1,
+                          coloredBorders: true,
+                          hint: 'email or username',
+                        ),
+                        CustomTextField(
+                          prefix: const Icon(Icons.lock),
+                          controller: passwordController,
+                          maxLines: 1,
+                          coloredBorders: true,
+                          hint: 'Password',
+                          isPassword: isVisible,
+                          suffix: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                isVisible = !isVisible;
+                              });
+                            },
+                            child: isVisible
+                                ? const Icon(Icons.visibility_off)
+                                : const Icon(Icons.visibility),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text.rich(
+                        TextSpan(
+                          text: "You don't have an account?  ",
+                          children: [
+                            TextSpan(
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => GoRouter.of(context)
+                                    .goNamed(MUSTRouter.signUpRoute),
+                              text: 'SignUp here',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: colorScheme.primary,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    BlocBuilder<GoogleSignInCubit, GoogleSignInState>(
+                      builder: (context, state) {
+                        return state.maybeWhen(
+                          loading: () => const CircularProgressIndicator(),
+                          orElse: () => EmailAuthButton(
+                            style: AuthButtonStyle(
+                              width: double.infinity,
+                              buttonColor: colorScheme.primary,
+                              textStyle: TextStyle(
+                                color: colorScheme.onSecondary,
+                              ),
+                            ),
+                            themeMode:
+                                isLightMode ? ThemeMode.light : ThemeMode.dark,
+                            // onPressed: () async => context
+                            //     .read<GoogleSignInCubit>()
+                            //     .signInWithGoogle(),
+                            // onPressed: () => GoRouter.of(context).goNamed(
+                            //   MUSTRouter.applicationRoute,
+                            // ),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 20),
                     BlocBuilder<GoogleSignInCubit, GoogleSignInState>(
                       builder: (context, state) {
                         return state.maybeWhen(
                           loading: () => const CircularProgressIndicator(),
                           orElse: () => GoogleAuthButton(
+                            style: AuthButtonStyle(
+                              width: double.infinity,
+                              buttonColor: colorScheme.primary,
+                              textStyle: TextStyle(
+                                color: colorScheme.onSecondary,
+                              ),
+                            ),
                             themeMode:
                                 isLightMode ? ThemeMode.light : ThemeMode.dark,
                             // onPressed: () async => context
@@ -75,7 +172,33 @@ class SignInScreen extends StatelessWidget {
                         );
                       },
                     ),
-                    const Spacer(),
+                    const SizedBox(height: 8),
+                    BlocBuilder<GoogleSignInCubit, GoogleSignInState>(
+                      builder: (context, state) {
+                        return state.maybeWhen(
+                          loading: () => const CircularProgressIndicator(),
+                          orElse: () => GithubAuthButton(
+                            style: AuthButtonStyle(
+                              width: double.infinity,
+                              buttonColor: colorScheme.primary,
+                              textStyle: TextStyle(
+                                color: colorScheme.onSecondary,
+                              ),
+                            ),
+                            themeMode:
+                                isLightMode ? ThemeMode.light : ThemeMode.dark,
+                            // onPressed: () async => context
+                            //     .read<GoogleSignInCubit>()
+                            //     .signInWithGoogle(),
+                            // onPressed: () => GoRouter.of(context).goNamed(
+                            //   MUSTRouter.applicationRoute,
+                            // ),
+                          ),
+                        );
+                      },
+                    ),
+
+
                   ],
                 ),
               ),

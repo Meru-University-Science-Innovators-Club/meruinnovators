@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meruinnovators/app.dart';
 import 'package:meruinnovators/common/utils/misc.dart';
 
 import 'package:meruinnovators/features/blogs/ui/widgets/blog_post.dart';
