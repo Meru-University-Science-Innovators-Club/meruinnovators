@@ -12,28 +12,30 @@ class SwitchToAllBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        left: 8,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            message,
-            style: Theme.of(context).primaryTextTheme.titleMedium,
-          ),
-          TextButton(
-            onPressed: onPressed,
-            child: Text(
-              'See All',
-              style: Theme.of(context).primaryTextTheme.titleMedium?.copyWith(
-                    color: Colors.greenAccent,
-                  ),
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: const EdgeInsets.only(
+          left: 8,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              message,
+              style: Theme.of(context).primaryTextTheme.titleMedium,
             ),
-            // splashColor: Colors.transparent,
-          ),
-        ],
+            TextButton(
+              onPressed: onPressed,
+              child: Text(
+                'See All',
+                style: Theme.of(context).primaryTextTheme.titleMedium?.copyWith(
+                      color: Colors.greenAccent,
+                    ),
+              ),
+              // splashColor: Colors.transparent,
+            ),
+          ],
+        ),
       ),
     );
   }

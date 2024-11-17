@@ -14,11 +14,7 @@ class EventsScreen extends StatelessWidget {
             child: ListView.builder(
               itemCount: 20,
               itemBuilder: (context, index) {
-                return Container(
-                  margin: const EdgeInsets.symmetric(vertical: 4),
-                  padding: const EdgeInsets.only(left: 12),
-                  child: const Eventcard(),
-                );
+                return  const Eventcard();
               },
             ),
           ),

@@ -1,6 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:meruinnovators/common/constants/assets_constants.dart';
+import 'package:meruinnovators/common/utils/misc.dart';
+import 'package:meruinnovators/common/utils/router.dart';
 import 'package:meruinnovators/common/widgets/social_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -12,25 +15,27 @@ class UserInfoCard extends StatefulWidget {
 }
 
 class _UserInfoCardState extends State<UserInfoCard> {
+
+
   List<String> social = [
     'https://github.com/piexie3',
     'https://x.com/emmanuel_dev2',
     'https://instagram.com/@emmanuel_dev2',
-    'https://meet.google.com/cbx-svps-teh',
     'https://google.com/piexie3',
-    'https://medium.com',
   ];
 
   @override
   Widget build(BuildContext context) {
+    final (isLightTheme,colorscheme) = Misc.getTheme(context);
     return Column(
       children: [
         SizedBox(
           child: Stack(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * .226,
+                height: MediaQuery.of(context).size.height * .225,
               ),
+
               Positioned(
                 top: 0,
                 left: 0,
@@ -40,6 +45,16 @@ class _UserInfoCardState extends State<UserInfoCard> {
                   child: Image.asset(
                     AppAssets.test1,
                     fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 10,
+                right: 10,
+                child: CircleAvatar(
+                  child: IconButton(
+                    onPressed: () => GoRouter.of(context).pushNamed(MUSTRouter.settingsRoute),
+                    icon:  Icon(Icons.settings,color: colorscheme.onSecondary,),
                   ),
                 ),
               ),
@@ -90,8 +105,8 @@ class _UserInfoCardState extends State<UserInfoCard> {
                   return Container(
                     height: 30,
                     margin: const EdgeInsets.symmetric(vertical: 2),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 3, horizontal: 5),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 3, horizontal: 5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.white.withOpacity(.3),
@@ -122,7 +137,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
                   final uri = Uri.parse(social[index]);
                   final domain = uri.host;
                   return SocialButton(
-                    ontap: () async{
+                    ontap: () async {
                       await launchUrl(Uri.parse(social[index]));
                     },
                     asset: 'https://$domain/favicon.ico',

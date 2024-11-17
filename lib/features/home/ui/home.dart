@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:meruinnovators/app.dart';
+import 'package:meruinnovators/common/utils/misc.dart';
 import 'package:meruinnovators/features/home/ui/widgets/SwitchToAllBar.dart';
 import 'package:meruinnovators/features/home/ui/widgets/aboutus.dart';
 import 'package:meruinnovators/features/home/ui/widgets/our_partners.dart';
 import 'package:meruinnovators/features/home/ui/widgets/testimoials.dart';
 import 'package:meruinnovators/features/home/ui/widgets/upcoming_events.dart';
+import 'package:sizer/sizer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -20,22 +24,44 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final (isLightTheme,colorscheme) = Misc.getTheme(context);
+
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              // Slider of past events pictures
-              SwitchToAllBar(onPressed: widget.switchEvents, message: 'Upcomming events'),
-              const UpcomingEventCard(),
-             SwitchToAllBar(onPressed: (){}, message: 'Our Partners'),
-              const OurPartners(),
-             SwitchToAllBar(onPressed: (){}, message: 'Testimonials'),
-              const Testimonials(),
-              SwitchToAllBar(onPressed: (){}, message: 'About Us'),
-              const AboutUsCard(),
-            ],
-          ),
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              pinned: true,
+              centerTitle: false,
+              toolbarHeight: 50,
+              title: Text(
+                'MUSTInnovators',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 18.sp,
+                ),
+              ),
+              actions: [
+                CircleAvatar(
+                  child: IconButton(
+                    onPressed: () {},
+                    icon:  Center(child: Icon(Icons.notifications_none_outlined,color: colorscheme.onSecondary,)),
+                  ),
+                ),
+                SizedBox(width: 10,)
+              ],
+            ),
+            // Slider of past events pictures
+            SwitchToAllBar(
+                onPressed: widget.switchEvents, message: 'Upcoming events',),
+            const UpcomingEventCard(),
+            SwitchToAllBar(onPressed: () {}, message: 'Our Partners'),
+            const OurPartners(),
+            SwitchToAllBar(onPressed: () {}, message: 'Testimonials'),
+            const Testimonials(),
+            SwitchToAllBar(onPressed: () {}, message: 'About Us'),
+            const AboutUsCard(),
+          ],
         ),
       ),
     );
