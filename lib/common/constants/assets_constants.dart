@@ -1,6 +1,7 @@
 class AppAssets {
   AppAssets._();
   static const String _svgsPath = 'assets/svgs';
+  static const String _imagePath = 'assets/images';
   static const String twitterLogo = '$_svgsPath/twitter_logo.svg';
   static const String homeFilledIcon = '$_svgsPath/home_filled.svg';
   static const String homeOutlinedIcon = '$_svgsPath/home_outlined.svg';
@@ -23,4 +24,7 @@ class AppAssets {
   static const String schoolpic = 'assets/innovation.jpg';
   static const String test1 = 'assets/images/test2.jpg';
   static const String aboutusmd = 'assets/aboutus.md';
+
+  static const String lightTheme = '$_imagePath/darktheme.png';
+  static const String darkTheme = '$_imagePath/lighttheme.png';
 }
