@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:meruinnovators/app.dart';
 import 'package:meruinnovators/common/utils/misc.dart';
+import 'package:meruinnovators/common/widgets/button.dart';
 import 'package:meruinnovators/features/home/ui/widgets/SwitchToAllBar.dart';
 import 'package:meruinnovators/features/home/ui/widgets/aboutus.dart';
 import 'package:meruinnovators/features/home/ui/widgets/our_partners.dart';
@@ -24,7 +25,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final (isLightTheme,colorscheme) = Misc.getTheme(context);
+    final (isLightTheme, colorscheme) = Misc.getTheme(context);
 
     return Scaffold(
       body: SafeArea(
@@ -42,18 +43,23 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               actions: [
-                CircleAvatar(
-                  child: IconButton(
-                    onPressed: () {},
-                    icon:  Center(child: Icon(Icons.notifications_none_outlined,color: colorscheme.onSecondary,)),
+                CircleButton(
+                  child: const Icon(
+                    Icons.notifications_none_outlined,
+                    size: 25,
                   ),
+                  onPressed: () {},
                 ),
-                SizedBox(width: 10,)
+                const SizedBox(
+                  width: 10,
+                )
               ],
             ),
             // Slider of past events pictures
             SwitchToAllBar(
-                onPressed: widget.switchEvents, message: 'Upcoming events',),
+              onPressed: widget.switchEvents,
+              message: 'Upcoming events',
+            ),
             const UpcomingEventCard(),
             SwitchToAllBar(onPressed: () {}, message: 'Our Partners'),
             const OurPartners(),

@@ -78,6 +78,21 @@ class AppTheme {
         indicatorColor: ThemeColors.blueDroidconColor,
         elevation: 3,
       ),
+      actionIconTheme: ActionIconThemeData(
+        backButtonIconBuilder: (context){
+          return Container(
+            height: 30,
+            width: 30,
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(.4),
+              shape: BoxShape.circle,
+            ),
+            child: const Center(
+              child: Icon(Icons.arrow_back),
+            ),
+          );
+        }
+      ),
       textTheme: GoogleFonts.montserratTextTheme().copyWith(
         bodyLarge: const TextStyle(
           color: Colors.white,

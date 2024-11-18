@@ -11,6 +11,9 @@ class ProjectsSection extends StatelessWidget {
     List<String> tags = [
       'javascript',
       'mongodb',
+      'mongodb',
+      'mongodb',
+      'mongodb',
       'ui',
     ];
     return SizedBox(
@@ -58,11 +61,12 @@ class ProjectsSection extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                         const SizedBox(height: 4,),
-                        Row(
-                          children: List.generate(tags.length, (index){
+                        Container(
+                          height: 20,
+                          child: ListView.builder(itemBuilder: (context,index){
                             return Container(
                               margin: const EdgeInsets.symmetric(horizontal: 4),
-                              padding: const EdgeInsets.symmetric(horizontal: 4,vertical: 1),
+                              padding: const EdgeInsets.symmetric(horizontal: 4,),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
                                 color: Colors.blue.withOpacity(.2),
@@ -72,8 +76,11 @@ class ProjectsSection extends StatelessWidget {
                                 maxLines: 1,
                               ),
                             );
-                          }),
-                        )
+                          },scrollDirection: Axis.horizontal,
+                            itemCount: tags.length,
+                          ),
+                        ),
+
                       ],
                     ),
                   ),

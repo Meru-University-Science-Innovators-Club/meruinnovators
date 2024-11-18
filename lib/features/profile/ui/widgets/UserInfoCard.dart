@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:meruinnovators/common/constants/assets_constants.dart';
 import 'package:meruinnovators/common/utils/misc.dart';
 import 'package:meruinnovators/common/utils/router.dart';
+import 'package:meruinnovators/common/widgets/button.dart';
 import 'package:meruinnovators/common/widgets/social_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,8 +16,6 @@ class UserInfoCard extends StatefulWidget {
 }
 
 class _UserInfoCardState extends State<UserInfoCard> {
-
-
   List<String> social = [
     'https://github.com/piexie3',
     'https://x.com/emmanuel_dev2',
@@ -26,22 +25,22 @@ class _UserInfoCardState extends State<UserInfoCard> {
 
   @override
   Widget build(BuildContext context) {
-    final (isLightTheme,colorscheme) = Misc.getTheme(context);
+    final (isLightTheme, colorScheme) = Misc.getTheme(context);
+
     return Column(
       children: [
         SizedBox(
           child: Stack(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * .225,
+                height: MediaQuery.of(context).size.height * .15,
               ),
-
               Positioned(
                 top: 0,
                 left: 0,
                 right: 0,
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height * .18,
+                  height: MediaQuery.of(context).size.height * .1,
                   child: Image.asset(
                     AppAssets.test1,
                     fit: BoxFit.cover,
@@ -49,17 +48,16 @@ class _UserInfoCardState extends State<UserInfoCard> {
                 ),
               ),
               Positioned(
-                top: 10,
-                right: 10,
-                child: CircleAvatar(
-                  child: IconButton(
-                    onPressed: () => GoRouter.of(context).pushNamed(MUSTRouter.settingsRoute),
-                    icon:  Icon(Icons.settings,color: colorscheme.onSecondary,),
-                  ),
-                ),
-              ),
+                  top: 10,
+                  right: 10,
+                  child: CircleButton(
+                    child:  Icon(Icons.settings,color: colorScheme.secondary,),
+                    onPressed: () => GoRouter.of(context).pushNamed(
+                      MUSTRouter.settingsRoute,
+                    ),
+                  ),),
               Positioned(
-                top: MediaQuery.of(context).size.height * .12,
+                top: MediaQuery.of(context).size.height * .05,
                 left: 30,
                 child: Container(
                   margin: const EdgeInsets.all(5),
@@ -144,7 +142,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
                     isNetwork: true,
                   );
                 }),
-              )
+              ),
             ],
           ),
         ),

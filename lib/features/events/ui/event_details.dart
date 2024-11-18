@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meruinnovators/common/widgets/button.dart';
 import 'package:meruinnovators/features/events/ui/widgets/event_detail_appBar.dart';
 
 class EventDetails extends StatelessWidget {
@@ -17,29 +18,27 @@ class EventDetails extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                     Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Upcoming Hacknight: Code, Collaborate, Create!',
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w600,
-                              ),
+                    Row(
+                      children: [
+                        const Expanded(
+                          child: Text(
+                            'Upcoming Hack-night: Code, Collaborate, Create!',
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
-                          CircleAvatar(
-                            child: IconButton(
-                                onPressed: () {},
-                                icon: const Icon(Icons.bookmark_outline)),
-                          )
-                        ],
-
+                        ),
+                        CircleButton(
+                          onPressed: () {},
+                          child: const Icon(Icons.bookmark_outline),
+                        )
+                      ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -75,19 +74,18 @@ class EventDetails extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                         Text(
-                            "Speaker(s)",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w800, fontSize: 24),
-                          ),
-
+                        const Text(
+                          "Speaker(s)",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w800, fontSize: 24),
+                        ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             children: [
                               ...List.generate(
                                 3,
-                                (index) => IntrinsicWidth(
+                                (index) => const IntrinsicWidth(
                                   child: ListTile(
                                     leading: CircleAvatar(
                                       backgroundImage: NetworkImage(
@@ -114,7 +112,7 @@ class EventDetails extends StatelessWidget {
                               .headlineSmall
                               ?.copyWith(fontWeight: FontWeight.w700),
                         ),
-                        Text(
+                        const Text(
                             """We’re excited to announce our upcoming Hacknight event, where developers, designers, and tech enthusiasts will come together for an evening of creativity, collaboration, and coding. This is a fantastic opportunity to work on personal projects, team up with others, or dive into challenges that spark your curiosity. Whether you’re a seasoned coder or someone looking to explore new technologies, our Hacknight will be a fun and inclusive environment for all skill levels.
                 
 The event will take place on [insert date] from [start time] to [end time] at [venue or online platform]. Throughout the night, participants will have the chance to collaborate on coding projects, build new applications, or even contribute to open-source software. We’ll provide a space where ideas can flow, and participants can get hands-on experience with new tools and technologies. Whether you’re tackling a complex problem or just experimenting with something new, the goal is to learn, create, and have fun.
@@ -125,7 +123,7 @@ At the end of the night, we’ll have a short demo session where you can showcas
                           
 So, grab your laptop, bring your passion, and come join us for an evening of innovation, collaboration, and coding! It’s going to be a night to remember, and we can’t wait to see what you create.
                             """),
-                        SizedBox(
+                        const SizedBox(
                           height: 42,
                         )
                       ],
