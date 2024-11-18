@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meruinnovators/common/data/models/page_item.dart';
 import 'package:meruinnovators/common/widgets/bottom_nav/bottom_nav_bar.dart';
-import 'package:meruinnovators/features/accaunt/ui/profile.dart';
 import 'package:meruinnovators/features/blogs/ui/blogs.dart';
 import 'package:meruinnovators/features/events/ui/events_screen.dart';
 import 'package:meruinnovators/features/home/ui/home.dart';
+import 'package:meruinnovators/features/profile/ui/profile.dart';
 
 /// Default Screen to handle all the UIs after the Splash Screen
 class ApplicationScreen extends StatefulWidget {
@@ -41,7 +41,10 @@ class _ApplicationScreenState extends State<ApplicationScreen> {
       ),
       const PageItem(title: 'Blogs', icon: 'blogs', screen: BlogsScreen()),
       const PageItem(
-          title: 'Account', icon: 'account', screen: ProfileScreen(),),
+        title: 'Account',
+        icon: 'account',
+        screen: ProfileScreen(),
+      ),
     ]);
   }
 

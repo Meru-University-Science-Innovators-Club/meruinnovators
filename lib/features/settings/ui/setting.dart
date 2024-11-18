@@ -21,6 +21,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
         child: CustomScrollView(
           slivers: [
             const SliverAppBar(
+              iconTheme: IconThemeData(
+                size: 30,
+              ),
               pinned: true,
               centerTitle: true,
               title: Text('Settings'),

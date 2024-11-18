@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meruinnovators/features/accaunt/ui/widgets/UserInfoCard.dart';
-import 'package:meruinnovators/features/accaunt/ui/widgets/project_section.dart';
 import 'package:meruinnovators/features/blogs/ui/widgets/blog_post.dart';
+import 'package:meruinnovators/features/profile/ui/widgets/UserInfoCard.dart';
+import 'package:meruinnovators/features/profile/ui/widgets/project_section.dart';
 import 'package:sizer/sizer.dart';
 
 class ProfileScreen extends StatelessWidget {
