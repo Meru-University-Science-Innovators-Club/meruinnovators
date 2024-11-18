@@ -7,15 +7,6 @@ class EventsDetailsAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  SliverAppBar(
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 16),
-        child: CircleAvatar(
-          child: IconButton(
-            onPressed: () => GoRouter.of(context).pop(),
-            icon: const Icon(Icons.arrow_back),
-          ),
-        ),
-      ),
       expandedHeight: MediaQuery.of(context).size.height * 0.3,
       flexibleSpace: FlexibleSpaceBar(
 
