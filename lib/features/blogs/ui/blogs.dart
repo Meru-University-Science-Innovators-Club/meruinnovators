@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:meruinnovators/common/utils/misc.dart';
+import 'package:meruinnovators/common/utils/router.dart';
+import 'package:meruinnovators/common/widgets/button.dart';
 
 import 'package:meruinnovators/features/blogs/ui/widgets/blog_post.dart';
 import 'package:sizer/sizer.dart';
@@ -24,31 +27,27 @@ class BlogsScreen extends StatelessWidget {
               ),
 
               actions: [
-                Container(
-                  height: 25,
-                  width: 25,
-                  margin: const EdgeInsets.symmetric(horizontal: 8),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(.3),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: const Center(
-                    child: Icon(
+                CircleButton(
+                  child: const Icon(Icons.add),
+                  onPressed: () =>
+                      GoRouter.of(context).pushNamed(MUSTRouter.addBlogRoute),
+                ),
+                CircleButton(
+                    child: const Icon(
                       Icons.sort,
                       size: 20,
                     ),
-                  ),
-                ),
+                    onPressed: () {},),
               ],
               // expandedHeight: 80,
               bottom: AppBar(
                 toolbarHeight: 40,
                 title: Container(
-                  margin: EdgeInsets.symmetric(vertical: 4),
+                  margin: const EdgeInsets.symmetric(vertical: 4),
                   child: SearchBar(
-                    backgroundColor: WidgetStatePropertyAll(colorScheme.surface.withOpacity(.3)),
+                    backgroundColor: WidgetStatePropertyAll(
+                        colorScheme.surface.withOpacity(.3),),
                     textInputAction: TextInputAction.search,
-
                     leading: const Icon(Icons.search),
                     hintText: 'Search blogs ....',
                     hintStyle: WidgetStatePropertyAll(
