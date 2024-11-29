@@ -48,7 +48,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       SizedBox(
                         width: 20,
                       ),
-                      TitleTexts(text: 'Log Out',color: Colors.redAccent,)
+                      TitleTexts(text: 'Log Out',color: Colors.redAccent,),
                     ],
                   ),
                 ),
