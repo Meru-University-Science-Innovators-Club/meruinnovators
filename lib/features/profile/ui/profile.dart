@@ -29,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: ProjectsSection(),
             ),
             SliverToBoxAdapter(
@@ -46,7 +46,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             SliverList.builder(itemBuilder: (context,index){
-              return BlogPosts();
+              return const BlogPosts();
             },itemCount: 5,)
           ],
         ),

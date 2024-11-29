@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quill/translations.dart';
 import 'package:meruinnovators/common/data/repsitory/hive_repository.dart';
 import 'package:meruinnovators/common/utils/router.dart';
 import 'package:meruinnovators/core/di/injectable.dart';
@@ -19,7 +20,7 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-    return ResponsiveSizer(
+    return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp.router(
           themeMode: getIt<HiveRepository>().retrieveThemeMode(),
@@ -27,6 +28,9 @@ class _MainAppState extends State<MainApp> {
           darkTheme: AppTheme.darkTheme(),
           debugShowCheckedModeBanner: false,
           routerConfig: getIt<MUSTRouter>().config(),
+          localizationsDelegates: const [
+            FlutterQuillLocalizations.delegate,
+          ],
         );
       },
     );
